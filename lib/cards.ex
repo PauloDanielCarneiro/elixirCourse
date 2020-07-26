@@ -13,6 +13,6 @@ defmodule Cards do
 
   """
   def create_deck do
-    ["Ace", "two", "threee"]
+    ["Ace", "two", "three"]
   end
 end
