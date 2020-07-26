@@ -9,11 +9,20 @@ defmodule Cards do
   ## Examples
 
       iex> Cards.create_deck()
-      ["Ace", "two", "three"]
+     ["Ace of Spades", "Two of Spades", "Three of Spades", "Four of Spades",
+      "Five of Spades", "Ace of Clubs", "Two of Clubs", "Three of Clubs",
+      "Four of Clubs", "Five of Clubs", "Ace of HEarts", "Two of HEarts",
+      "Three of HEarts", "Four of HEarts", "Five of HEarts", "Ace of Diamonds",
+      "Two of Diamonds", "Three of Diamonds", "Four of Diamonds", "Five of Diamonds"]
 
   """
   def create_deck do
-    ["Ace", "two", "three"]
+    values = ["Ace", "Two", "Three", "Four", "Five"]
+    suits = ["Spades", "Clubs", "Hearts", "Diamonds"]
+
+    for suit <- suits, value <- values do
+      "#{value} of #{suit}"
+    end
   end
 
   @doc """
